@@ -39,8 +39,6 @@ alter table paciente modify cpf varchar(11);
 
 describe medico;
 
-insert into medico values(41, 'Luís miguel da Silva Pacheco', 16/04/2010, '32198745610', 'Foz do Iguaçu', 'Programação');
-
 insert into medico values(1, 'João', '1984-06-28', '10000100000', 'Florianópolis', 'Ortopedia');
 insert into medico values(2, 'Maria', '1945-11-08', '10000100009', 'Foz do Iguaçu', 'Pediatra');
 insert into medico values(3, 'João', '1984-06-28', '10000100000', 'Florianópolis', 'Ortopedia');
@@ -71,3 +69,8 @@ insert into consulta values(4, 4, '2024-10-22', '14:00');
 truncate table consulta;
 
 select * from medico;
+update medico set especialidade = 'Dermatologia' where codMed = 5;
+
+select * from paciente;
+update paciente set cidade = 'Santa Terezinha de Itaipu' where codPac = 5;
+delete from paciente where codPac = 3;
