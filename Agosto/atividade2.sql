@@ -1,4 +1,4 @@
-#numero 1
+#letra A
 create database Cinema;
 show databases;
 use Cinema;
@@ -30,7 +30,7 @@ create table personagem(
     foreign key (codFilme) references filme (codFilme) on delete cascade on update cascade
 );
 
-#letra b
+#letra B
 INSERT INTO ator VALUES 
 ('a1', 'Demi Moore', 'Maria da Silva', 'USA', 'F', 32, NULL, NULL),
 ('a10', 'William Hurt', 'William Ernest Hurt', 'USA', 'M', 45, 2, 1),
@@ -124,3 +124,22 @@ INSERT INTO personagem VALUES
 ('f7', 'a8', 'Bill', 5000000),
 ('f8', 'a3', 'Bette', 3000000),
 ('f9', 'a9', 'Blade', 10000000);
+
+show tables;
+select * from ator;
+
+update ator set idade = 36 where codAtor = 'a18';
+update ator set nacionalidade = 'UK' where codAtor = 'a13';
+update ator set nacionalidade = 'BR' where nomeArtistico = 'Jim Carrey';
+
+select * from filme;
+update filme set orcamento = 15000000 where nomeFilme = 'Passageiro 57';
+update filme set anoFilme = 1994 where nomeFilme = 'Forrest Gump';
+update filme set tempo = 121 where nomeFilme = 'A Jurada';
+
+update ator set nomeReal = 'William Bradley Pitt' where nomeArtistico = 'Brad Pitt';
+
+update personagem set salario = 25000000 where codFilme = 'f26' and codAtor = 'a15';
+update personagem set personagem = 'Stanley Ipkiss' where codFilme = 'f18' and codAtor = 'a17';
+
+delete from filme where codFilme = 'f5';
