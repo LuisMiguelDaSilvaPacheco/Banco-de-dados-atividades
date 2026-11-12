@@ -6,4 +6,4 @@ select filme.NomeFilme, personagem.Personagem from ator inner join personagem on
  
 use Clinica;
 
-select paciente.nomePac, medico.nomeMed, consulta.dia from paciente inner join consulta on paciente.codPac = consulta.codPac inner join medico on medico.codMed = consulta.codMed where consulta.dia like "%-04-%"
+select paciente.nomePac, medico.nomeMed, consulta.dia from paciente inner join consulta on paciente.codPac = consulta.codPac inner join medico on medico.codMed = consulta.codMed where consulta.dia like "2025-04-%"
