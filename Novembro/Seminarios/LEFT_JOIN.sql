@@ -1,1 +1,1 @@
-
+-- 1) O LEFT JOIN faz com que apareçam todas as linhas da tabela da direita, caso elas tenham um correspondente na tabela da direita, ele vai aparecer. Caso não haja um correspondente na tabela da direita, aparecerá como NULL.and
