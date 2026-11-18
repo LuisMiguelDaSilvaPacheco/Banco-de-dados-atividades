@@ -1,6 +1,6 @@
 -- 1)
 select count(*) as quantidadeJogadores from jogadores;
-select distinct(clube) from jogadores;
+select distinct clube from jogadores;
 
 -- 2)
 select max(gols) from jogadores;
