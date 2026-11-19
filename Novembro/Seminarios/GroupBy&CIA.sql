@@ -22,7 +22,7 @@ select * from Vendas order by Valor desc;
 select Categoria, avg(Valor) from Vendas group by Categoria;
 
 -- c)
-select Categoria, avg(Valor) from Vendas group by Categoria having min(Valor) > 200;
+select Categoria, avg(Valor) from Vendas group by Categoria having avg(Valor) > 200;
 
 -- d)
 select * from Vendas where (select avg(Valor) from Vendas) < Valor;
